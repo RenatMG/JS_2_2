@@ -24,7 +24,7 @@ function sendMyPost() {
    // data = "'"+data+"'";
     console.log(data);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.send(myPost);
+    xhr.send(data);
     xhr.onreadystatechange = function () {
         console.log(xhr.readyState, xhr.status);
         if (xhr.readyState === 4) {
