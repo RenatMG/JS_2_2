@@ -20,7 +20,7 @@ function sendMyPost() {
     var data = Object.keys(myPost).map(function (key) {
         return key + '=' + myPost[key];
     }).join('&');
-    data = JSON.stringify(data);
+   // data = JSON.stringify(data);
     console.log(data);
     xhr.send(myPost);
     xhr.onreadystatechange = function () {
