@@ -15,7 +15,7 @@ function MyPost() {
 function sendMyPost() {
     var myPost = new MyPost(); 
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'validator.php', true);
+    xhr.open('POST', 'validator.php', true);
 
     var data = Object.keys(myPost).map(function (key) {
         return key + '=' + myPost[key];
