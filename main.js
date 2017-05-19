@@ -20,7 +20,8 @@ function sendMyPost() {
     var data = Object.keys(myPost).map(function (key) {
         return key + '=' + myPost[key];
     }).join('&');
-    data = JSON.stringify(data);
+   // data = JSON.stringify(data);
+    data = "'"+data+"'";
     console.log(data);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send(myPost);
