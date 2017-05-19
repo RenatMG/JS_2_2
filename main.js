@@ -1,4 +1,4 @@
-,
+'use strict';
 //    создаем класс для объекта принимающий данные с формы
 function MyPost() {
     this.username = document.querySelector('.userName').value;
@@ -13,7 +13,7 @@ function MyPost() {
 
 
 function sendMyPost() {
-    var myPost = new MyPost; 
+    var myPost = new MyPost(); 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'validator.php', true);
 
@@ -25,13 +25,13 @@ function sendMyPost() {
     xhr.send(myPost);
     xhr.onreadystatechange = function () {
         console.log(xhr.readyState, xhr.status);
-        if (xhr.readyState == 4) {
-            if (xhr.status == 200) {
+        if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
                 var answer = xhr.responseText;
                 answer = JSON.parse(answer);
                 console.log(answer);
             }
         }
-    }
-}
+    };
+};
 document.getElementById('button').onclick = sendMyPost;
