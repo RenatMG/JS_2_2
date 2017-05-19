@@ -1,0 +1,10 @@
+.body{
+    min-width: 30%;
+    font-style: italic;
+}
+.labelInput{
+    display: block;
+    float: left;
+    margin-right: 30px;
+    width: 100px;
+}
